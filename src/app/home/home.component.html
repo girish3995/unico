@@ -1,0 +1,366 @@
+<ng-container *ngIf="!spinnerFlag">
+<div style="display: grid;grid-template-columns: 50% 50%;">
+    <div style="margin: auto 80px;">
+        <h2>
+            Working round-the-cloud to keep you
+            & your family safe on your next stay
+        </h2>
+        <p style="font-size: 18px;font-weight: 500;margin-top: 20px;">
+            Our ground-team along with industry experts are implementing all WHO safety guidelines to make sure you are
+            100% protected
+        </p>
+    </div>
+    <div class="wrapper"></div>
+    <div style="position: absolute;top: 80%;left: 20%;width: 60%;right: 20%;box-shadow: 0 5px 10px rgb(0 0 0 / 16%);">
+        <div style="height: 100px;width: 100%;background-color: white;border-radius: 5px;">
+            <div style="margin:0px" class="row search-form">
+                <div class="col-lg-4 col-md-3 col-sm-12 input-text location-search">
+                    <div class="form-group">
+                        <div><label class="font-14">Location</label>
+                            <div class="search-container"><input type="text" list="menu" name="city" autocomplete="off"
+                                    autocapitalize="none" value="" placeholder="Where are you travelling to/from?"
+                                    class="form-control font-16 search-dropdown text-capitalize">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-6 input-text">
+                    <div class="form-group"><label class="font-14">Date</label>
+                        <input type="date"
+                            placeholder="Check-in / Check-out" class="font-16 form-control bg-white">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-12 input-text">
+                    <div class="form-group"><label class="font-14">Guest</label><input type="number" class="form-control sperson dropdown-toggle bg-white font-16"
+                            placeholder="1 Guest">
+                    </div>
+                </div>
+                <div style="margin: 30px auto;" class="col-lg-2 col-md-3 col-sm-12 search-btn font-20">
+                    <button style="background-color: #df495b;color: white;" class="btn font-weight-bold">SEARCH</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="m-t-75">
+    <div class="container">
+        <div class="row mt-3 mb-4 justify-content-center my-3">
+            <h3 class="text-center my-2 mt-5 h2-26-redhat-bold">Explore ‘Incredible India’, Your Way</h3>
+        </div>
+        <div class="row justify-content-center subcontent mb-5">
+            <div class="col-10">
+                <h6 class="text-center p1-dark-16">Skip the cookie-cutter hotel stays for the
+                    charm and warmth of our luxury holiday homes and personalized experiences. With over 500+ homes in
+                    50+ destinations, invite you to experience the authenticity of India without compromising on
+                    hospitality.</h6>
+            </div>
+        </div>
+        <carousel [height]="250" [width]="getWidth()" [cellsToShow]="5" [arrows]="false" [autoplay]="true" [autoplayInterval]="2000"
+             [dots]="true" [loop]="true">
+            <div *ngFor="let key of imageList;let i=index" class="carousel-cell">
+                <img style="border-radius: 100px;height: 200px;width: fit-content;display: flex;margin: auto;"
+                    [src]="imageList[i].img" loading="lazy">
+                <p style="text-align: center;">{{imageList[i].name}}</p>
+            </div>
+        </carousel>
+    </div>
+</section>
+<div style="text-align: center;margin-top: 30px;">
+    <img
+       style="width:80%;height: 300px;" src="../../assets/icons/placeholder.jpg">
+</div>
+<div style="margin-top: 70px;margin-bottom: 70px;background: #f7f7f7;" class="vist pb-4">
+    <div class="container">
+        <h2 style="text-align: center;" class="main-title pb-4 h2-26-redhat-bold">Why Choose Vista For Your Ideal
+            Getaway
+        </h2>
+        <div style="margin-top: 30px;justify-content: space-between;" class="row icons">
+            <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12"><img alt="icon" width="70" height="60"
+                    style="margin-left: 70px;"
+                    src="../../assets/icons/placeholder.jpg">
+                <p class="para text-center p1-16-redhat-medium">Only 1 in 50 homes are accepted
+                </p>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12"><img
+                src="../../assets/icons/placeholder.jpg"
+                    alt="icon" width="70" height="60" style="margin-left: 70px;">
+                <p class="para text-center p1-16-redhat-medium">500+ Handpicked homes across
+                    India</p>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12"><img
+                src="../../assets/icons/placeholder.jpg"
+                    alt="icon" width="70" height="60" style="margin-left: 70px;">
+                <p class="para text-center p1-16-redhat-medium">Hosted over 250,000+ happy guests
+                </p>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12"><img
+                src="../../assets/icons/placeholder.jpg"
+                    alt="icon" width="70" height="60" style="margin-left: 70px;">
+                <p class="para text-center p1-16-redhat-medium">Homes are regularly audited for
+                    200+ factors</p>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12"><img
+                src="../../assets/icons/placeholder.jpg"
+                    alt="alt" width="70" height="60" style="margin-left: 70px;">
+                <p class="para text-center p1-16-redhat-medium">We empower the local community
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="mt-5 mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <h3 class="text-center h2-26-redhat-bold">Our Featured Holiday Homes</h3>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 mt-2 mb-4">
+                <p class="text-center pb-4 p1-dark-16">We carefully handpick and manage all our
+                    homes, to ensure you have a hassle-free, pleasant stay.</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-6 col-md-6 col-sm-12"><a>
+                    <div class="prop-img img-con-1"
+                        >
+                        <img class="img-100" src="../../assets/icons/placeholder.jpg">
+                        <div class="grid-inner-container p-2">
+                            <div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 p1-16-redhat-medium"> Amara Villa </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p2-light-14"> Per Night </div>
+                            </div>
+                            <div>
+                                <div class="d-inline-block overflow-nowrap w-50 p2-dark-14">
+                                    Alibaug, Maharashtra </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p1-16-redhat-medium"> ₹ 67,000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="col-lg-3 col-md-3 col-sm-12"><a>
+                    <div class="prop-img img-con-2"
+                        >
+                        <img class="img-100" src="../../assets/icons/placeholder.jpg">
+                        <div class="grid-inner-container p-2">
+                            <div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 p1-16-redhat-medium"> Casa De Joy </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p2-light-14"> Per Night </div>
+                            </div>
+                            <div>
+                                <div class="d-inline-block overflow-nowrap w-50 p2-dark-14">
+                                    Nerul, Goa </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p1-16-redhat-medium"> ₹ 61,000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="col-lg-3 col-md-3 col-sm-12"><a>
+                    <div class="prop-img img-con-3"
+                        >
+                        <img class="img-100" src="../../assets/icons/placeholder.jpg">
+                        <div class="grid-inner-container p-2">
+                            <div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 p1-16-redhat-medium"> Casa Ela 11 </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p2-light-14"> Per Night </div>
+                            </div>
+                            <div>
+                                <div class="d-inline-block overflow-nowrap w-50 p2-dark-14">
+                                    Lonavala, Maharashtra </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p1-16-redhat-medium"> ₹ 20,750
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a></div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-3 col-md-3 col-sm-12"><a>
+                    <div class="prop-img img-con-4"
+                        >
+                        <img class="img-100" src="../../assets/icons/placeholder.jpg">
+                        <div class="grid-inner-container p-2">
+                            <div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 p1-16-redhat-medium"> Open House </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p2-light-14"> Per Night </div>
+                            </div>
+                            <div>
+                                <div class="d-inline-block overflow-nowrap w-50 p2-dark-14">
+                                    Pune, Maharashtra </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p1-16-redhat-medium"> ₹ 19,250
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="col-lg-3 col-md-3 col-sm-12"><a>
+                    <div class="prop-img img-con-5"
+                        >
+                        <img class="img-100" src="../../assets/icons/placeholder.jpg">
+                        <div class="grid-inner-container p-2">
+                            <div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 p1-16-redhat-medium"> Pranaam </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p2-light-14"> Per Night </div>
+                            </div>
+                            <div>
+                                <div class="d-inline-block overflow-nowrap w-50 p2-dark-14">
+                                    Alibaug, Maharashtra </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p1-16-redhat-medium"> ₹ 45,500
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="col-lg-6 col-md-6 col-sm-12"><a>
+                    <div class="prop-img img-con-6"
+                        >
+                        <img class="img-100" src="../../assets/icons/placeholder.jpg">
+                        <div class="grid-inner-container p-2">
+                            <div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 p1-16-redhat-medium"> The Mansion </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p2-light-14"> Per Night </div>
+                            </div>
+                            <div>
+                                <div class="d-inline-block overflow-nowrap w-50 p2-dark-14">
+                                    Kasauli, Himachal Pradesh </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p1-16-redhat-medium"> ₹ 28,000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a></div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-6 col-md-6 col-sm-12"><a>
+                    <div class="prop-img img-con-7"
+                        >
+                        <img class="img-100" src="../../assets/icons/placeholder.jpg">
+                        <div class="grid-inner-container p-2">
+                            <div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 p1-16-redhat-medium"> The Rain </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p2-light-14"> Per Night </div>
+                            </div>
+                            <div>
+                                <div class="d-inline-block overflow-nowrap w-50 p2-dark-14">
+                                    Alleppey, Kerala </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p1-16-redhat-medium"> ₹ 39,000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="col-lg-3 col-md-3 col-sm-12"><a>
+                    <div class="prop-img img-con-8"
+                        >
+                        <img class="img-100" src="../../assets/icons/placeholder.jpg">
+                        <div class="grid-inner-container p-2">
+                            <div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 p1-16-redhat-medium"> Umber Villa </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p2-light-14"> Per Night </div>
+                            </div>
+                            <div>
+                                <div class="d-inline-block overflow-nowrap w-50 p2-dark-14">
+                                    Alibaug, Maharashtra </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p1-16-redhat-medium"> ₹ 60,375
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="col-lg-3 col-md-3 col-sm-12"><a>
+                    <div class="prop-img img-con-9"
+                        >
+                        <img class="img-100" src="../../assets/icons/placeholder.jpg">
+                        <div class="grid-inner-container p-2">
+                            <div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 p1-16-redhat-medium"> The Winter Line
+                                </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p2-light-14"> Per Night </div>
+                            </div>
+                            <div>
+                                <div class="d-inline-block overflow-nowrap w-50 p2-dark-14">
+                                    Kasauli, Himachal Pradesh </div>
+                                <div
+                                    class="d-inline-block overflow-nowrap w-50 text-right p1-16-redhat-medium"> ₹ 25,000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a></div>
+        </div>
+    </div>
+</section>
+
+<h3 style="text-align: center;">USERS LIST DETAILS</h3>
+<table *ngIf="tableData">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>ADDRESS</th>
+        <th>PHONE</th>
+        <th>WEBSITE</th>
+    </tr>
+    <tr *ngFor="let data of tableData">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td>
+            <div>City : {{data.address.city}}</div>
+            <div>Street : {{data.address.street}}</div>
+            <div>Suite : {{data.address.suite}}</div>
+            <div>Zipcode : {{data.address.zipcode}}</div>
+            <div>Lat : {{data.address.geo.lat}}  Lng:{{data.address.geo.lng}}</div>
+        </td>
+        <td>{{data.phone}}</td>
+        <td>{{data.website}}</td>
+    </tr>
+</table>
+</ng-container>
+<div class="spinnerSection" *ngIf="spinnerFlag">
+    <div class='demo'>
+        <div class='circle'>
+          <div class='inner'></div>
+        </div>
+        <div class='circle'>
+          <div class='inner'></div>
+        </div>
+        <div class='circle'>
+          <div class='inner'></div>
+        </div>
+        <div class='circle'>
+          <div class='inner'></div>
+        </div>
+        <div class='circle'>
+          <div class='inner'></div>
+        </div>
+      </div>
+</div>
